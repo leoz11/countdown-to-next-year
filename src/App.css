@@ -1,0 +1,157 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212; /* Cor de fundo mais escura */
+}
+
+.container {
+  text-align: center;
+  animation: slide-in 1s ease-in-out;
+  color: #fff;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #5bc0de; /* Cor azul claro */
+}
+
+.countdown {
+  margin-bottom: 2rem;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5bc0de; /* Cor azul claro */
+}
+
+.number {
+  color: #5bc0de; /* Cor azul claro */
+  font-weight: bold;
+}
+
+.fireworks {
+  background-image: url('https://i.imgur.com/KKsFOT7.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  animation: explode 2s forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.loading-bar {
+  width: 100%;
+  height: 15px;
+  background-color: #666; /* Cor de fundo da barra */
+  margin-top: 2rem;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  width: 100%;
+  height: 100%;
+  background-color: #5bc0de; /* Cor da progressão da barra */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  transition: width 1s linear; /* Adicionada a transição */
+}
+
+.percentage {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #5bc0de; /* Cor azul claro */
+}
+
+@keyframes loading-progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.info-item {
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.info-label {
+  font-size: 1rem;
+  color: #5bc0de; /* Cor azul claro */
+}
+
+.info-value {
+  font-size: 2rem;
+  color: #5bc0de; /* Cor azul claro */
+}
+
+.days-passed {
+  margin-top: 20px;
+}
+
+.fireworks {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.firework {
+  width: 20px;
+  height: 20px;
+  background-color: #f00; /* Cor dos fogos (vermelho) */
+  border-radius: 50%;
+  position: relative;
+  animation: explode 2s forwards;
+  margin: 0 5px;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
